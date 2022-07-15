@@ -24,12 +24,9 @@
           <a href="/" class="logo header__logo">
             <span class="logo__first-part">Web</span>Studio
           </a>
-
-          <!---------------- mobile-modal-button_------------------------------------------------------>
-
           <ul class="menu">
             <li class="menu__item">
-              <a class="menu__link--current" href="./index.html">Студия</a>
+              <a class="menu__link menu__link--current"" href="./index.html">Студия</a>
             </li>
             <li class="menu__item">
               <a class="menu__link menu__link" href="./portfolio.html"
@@ -59,6 +56,8 @@
             </a>
           </li>
         </ul>
+ <!---------------- mobile-modal-button_------------------------------------------------------>
+
         <button class="nav__button" type="button" data-open>
           <svg class="nav__icon" width="40" height="40" aria-label="меню">
             <use href="./images/icons/icons.svg#icon-menu_burger"></use>
@@ -82,7 +81,7 @@
 
       <section class="features">
         <div class="container">
-          <h2 class="features__title text-hide">Особливості</h2>
+          <h2 class="features__title text-hide">Особливості</h2> 
           <ul class="features__list">
             <li class="features__item">
               <div class="features__box">
@@ -154,7 +153,6 @@
                     "
                     media="(max-width:768px)"
                   />
-
                   <source
                     srcset="
                       ./images/tab/portfolio-9-354.jpg   1x,
@@ -733,6 +731,55 @@
         </form>
       </div>
     </div>
+
+<!--  Modal mobile contacts -->
+
+        <div class="backdrop_mobile is-hidden" mobile-modal>
+      <div class="modal_mobile">
+        <button class=" modal__close-button--mb" data-close>
+          <svg class="modal__close-icon--mb" width="30" height="30">
+            <use href="./images/icons/symbol-defs.svg#icon-close-1"></use>
+          </svg>
+        </button>
+        <ul class="modal_menu">
+          <li class="modal__item">
+            <a href="" class="modal__link">Студия </a>
+          </li>
+          <li class="modal__item">
+            <a href="" class="modal__link">Портфолио</a>
+          </li>
+          <li class="modal__item contacts">
+            <a href="" class="modal__link"> Контакты</a>
+          </li>
+          <li class="modal__item">
+            <a href="tel:+380961111111" class="modal__link modal__phone">
+              +38 096 111 11 11
+            </a>
+          </li>
+          <li class="modal__item item-email">
+            <a href="" class="modal__link modal__email"> info@devstudio.com </a>
+          </li>
+        </ul>
+        <ul class="modal__soc-list">
+          <li class="modal__soc-item">
+            <a href=" " class="modal__soc-link">Instagram<span class="modal__partition" > | </span></a>
+          </li>
+           <ul class="modal__soc-list">
+          <li class="modal__soc-item">
+            <a href=" " class="modal__soc-link"> Twitter<span class="modal__partition" > | </span></a>
+          </li>
+           <ul class="modal__soc-list">
+          <li class="modal__soc-item">
+            <a href=" " class="modal__soc-link"> Facebook<span class="modal__partition" > | </span></a>
+          </li>
+           <ul class="modal__soc-list">
+          <li class="modal__soc-item">
+            <a href=" " class="modal__soc-link">Linkedin</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <script src="./js/modal _mobile.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>
