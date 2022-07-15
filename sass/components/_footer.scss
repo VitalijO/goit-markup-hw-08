@@ -1,0 +1,177 @@
+.footer {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: var(--body-dark-color);
+}
+
+
+.container__footer {
+    text-align: center;
+@media screen and (min-width:$tablet) {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: baseline;
+}
+}
+
+.footer__contacts{
+@media screen and (min-width:$tablet){
+    margin-right: 165px; 
+    }
+@media screen and (min-width:$desktop) {
+    margin-right: 70px;
+}
+}
+
+
+.footer--logo {
+    display: block;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+
+.footer__address,
+.footer__email,
+.footer__phon {
+   
+    text-decoration: var(--accent-color);
+    font-style:normal; 
+@include font(null, 14px, 1.71, 0.03em);
+@include animation(color);
+
+}
+
+.footer__list{
+    margin-bottom: 60px;
+}
+
+.footer__address {
+   
+    color: #fff;
+
+&:hover,
+&:focus {
+            color: var(--accent-color);
+        }
+}
+
+.footer__email,
+.footer__phon {
+    color: rgba(255, 255, 255, 0.6);
+
+&:hover,
+&:focus
+ {
+            color: var(--accent-color);
+        }
+}
+
+//__________________________________________ Join us section_____________________________________________________________
+
+
+.join-us {
+    margin-bottom:60px;
+    text-align: center;
+@media screen and (min-width:$desktop) {
+        margin-right: 93px;
+}
+}
+
+.join-us__title {
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: #fff;
+    @include font(700, 14px, 1.14, 0.03em);
+}
+
+.join-us__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap:10px;
+}
+
+.join-us__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.1);
+
+    @include animation(background-color);
+
+    &:hover {
+        background-color: var(--accent-color);
+
+    }
+}
+
+
+.join-us__icon {
+    fill: currentColor;
+}
+
+//__________________________________________ Mailling section_____________________________________________________________
+
+.mailling {
+    text-align: center;
+@media screen and (min-width:$desktop){
+    text-align: start;
+}
+}
+
+.mailling__title {
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: #fff;
+    @include font(700, 14px, 1.14, 0.03em);
+}
+
+.mailling__form {
+    text-align: center;
+}
+
+.mailling__input {
+    width: 100%;
+@media screen and (min-width:$desktop){
+    width: 358px;
+    margin-right: 12px;
+}
+    height: 50px;
+    padding-left: 16px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+    outline: transparent;
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    background: var(--body-dark-color)
+    
+}
+
+
+
+.mailling__input::placeholder {
+    background: var(--body-dark-color);
+    color: rgba(255, 255, 255, 0.6);
+    @include font(400, 16px, 1.25, 0.03em);
+}
+
+
+.mailling__button {
+    display: inline-block;
+    text-align: center;
+    @include font(700, 16px, 1.88, 0.06em);
+}
+
+.mailling__icon-send {
+    margin-left: 10px;
+}

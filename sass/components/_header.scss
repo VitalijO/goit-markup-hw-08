@@ -1,0 +1,181 @@
+.header {
+    border-bottom: 1px solid #ECECEC;   
+}
+
+
+.header__container{
+   display: flex;
+   justify-content: space-between;
+             
+}
+
+
+nav {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+
+}
+
+.header__logo {
+    padding-top: 24px;
+    padding-bottom: 25px;
+    
+    margin-right: 88px;
+}
+  
+.menu{
+    display: flex;  
+   //margin-left: 88px;
+/* @media screen and (min-width:$desktop){
+    margin-left: 93px;
+} */
+}
+
+.menu__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    @media screen and (min-width:$tablet){
+    display: flex;
+    position: relative;
+    justify-content: flex-start;
+    margin-right: 50px; 
+}
+&:last-child {
+    margin-right: 0; 
+}
+}
+
+
+.auth{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    
+   
+@media screen and (min-width:$desktop) {
+    flex-direction: row;
+    align-items: center;
+    
+}
+}
+
+
+.menu,
+.auth {
+@media screen and (max-width:767px) {
+        display: none;
+    }
+
+    @include font(500, 14px, 1.14, 0.02em);
+}
+
+.auth {
+    @media screen and (max-width:767px){
+        display: none;
+        margin-left: 315px;
+    }
+        
+    @media screen and (min-width:$tablet){
+        display: flex;
+        margin-left: 90px; 
+    }
+    
+}
+
+.auth__item.auth__email{
+    margin-right: 30px;
+}
+
+.menu__link {
+    @media screen and (min-width:$tablet){
+    padding-top: 32px;
+    padding-bottom: 32px;
+    }
+    
+
+@include animation(color);
+
+&:hover,
+&:focus{
+        color: var(--accent-color);
+    }
+}
+
+.menu__link--current::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    height: 4px;
+    width: 100%;
+    background-color: var(--accent-color);
+    border-radius: 2px;
+
+    
+}
+
+
+.auth__link {
+    text-decoration: none;
+    color: var(--common-text-color);
+    display: flex;
+    @include font(500, 12px, 1.17, 0.02em);
+    @media screen and (min-width:$desktop) {
+      @include font(500, 14px, 1.17, 0.03em);
+    }
+    
+
+&:last-child {
+    margin-right: 0;
+   }
+}
+
+
+
+.menu__link {
+    text-decoration: var(--accent-color);
+    color: var(--title-text-color);
+
+&:last-child {
+    margin-right: 0;
+}
+&.menu__link--current{
+    color: var(--accent-color);
+}
+
+}
+
+.auth__phone-icon,
+.auth__email-icon {
+
+    fill: currentColor;
+    margin-right: 10px;
+
+}
+
+
+.nav__button {
+
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    border: none;
+    margin-top: auto;
+    margin-bottom:auto;
+    margin-right: 10px;
+
+    &:hover,
+    &:focus {
+        fill: var(--accent-color);
+    }
+}
+
+.nav__button {
+
+@media screen and (min-width:$tablet) {
+        display: none;
+    }
+}

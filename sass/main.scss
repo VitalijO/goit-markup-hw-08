@@ -1,0 +1,36 @@
+@import './base/reset';
+@import './base/variables';
+@import './base/breakpoints';
+@import './base/common';
+
+@import './utils/mixins';
+@import './utils/logo';
+@import './utils/btn';
+@import './utils/hidden';
+
+
+
+@import './components/header';
+@import './components/hero';
+
+@import './components/menu-buttons';
+@import './components/made-projects';
+
+@import './components/features';
+@import './components/what-we-do';
+@import './components/team';
+@import './components/clients';
+
+@import './components/footer';
+@import './components/modal_mobile';
+@import './components/modal';
+
+
+
+
+
+
+
+
+
+
