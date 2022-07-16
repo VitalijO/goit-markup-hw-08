@@ -1208,13 +1208,16 @@ nav {
   margin-bottom: 32px;
 }
 
+.modal-contacts-mb__link {
+  text-decoration: none;
+}
+
 .modal-contacts-mb__link.modal-contacts-mb__link--phone {
   font-weight: 500;
   font-size: 34px;
   line-height: 1.2;
   letter-spacing: 0.03em;
   color: var(--accent-color);
-  text-decoration: none;
 }
 
 .modal-contacts-mb__link.modal-contacts-mb__link--email {
