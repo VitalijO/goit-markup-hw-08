@@ -1136,35 +1136,34 @@ nav {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.backdrop_mobile.is-hidden .modal {
-  transform: translate(-50%, -50%) scale(0.1);
-  transition-property: transform;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
 .modal_mobile {
   position: relative;
-  padding-top: 48px;
   padding-left: 40px;
-  width: 480px;
-  height: 796px;
+  padding-right: 15px;
+  padding-top: 48px;
+  padding-bottom: 48px;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
   background: #fff;
+}
+
+@media screen and (min-width: 480px) {
+  .modal_mobile {
+    max-width: 768px;
+  }
 }
 
 .modal__close-button--mb {
   position: absolute;
-  left: 440px;
+  right: 8px;
   top: 8px;
   border: 5px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   width: 30px;
   height: 30px;
   cursor: pointer;
-}
-
-.modal__close-button--mb:hover .modal__close-icon--mb {
-  fill: var(--accent-color);
 }
 
 .modal__close-icon--mb {
@@ -1179,30 +1178,11 @@ nav {
 }
 
 .modal__close-icon--mb:hover {
-  fill: currentColor;
-}
-
-.modal-button {
-  margin-top: 30px;
-  margin-left: 124px;
-  margin-right: 124px;
-  text-align: center;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.88;
-  letter-spacing: 0.06em;
+  fill: var(--accent-color);
 }
 
 .modal__item {
   margin-bottom: 32px;
-}
-
-.modal__item.contacts {
-  margin-bottom: 302px;
-}
-
-.modal__item.item-email {
-  margin-bottom: 64px;
 }
 
 .modal__link {
@@ -1214,14 +1194,30 @@ nav {
   text-decoration: none;
 }
 
-.modal__link.modal__phone {
+.modal__link:hover, .modal__link:focus {
+  color: var(--accent-color);
+}
+
+.modal-contacts-mb {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 64px;
+}
+
+.modal-contacts-mb__item {
+  margin-bottom: 32px;
+}
+
+.modal-contacts-mb__link.modal-contacts-mb__link--phone {
   font-weight: 500;
   font-size: 34px;
   line-height: 1.2;
   letter-spacing: 0.03em;
+  color: var(--accent-color);
+  text-decoration: none;
 }
 
-.modal__link.modal__email {
+.modal-contacts-mb__link.modal-contacts-mb__link--email {
   font-weight: 500;
   font-size: 24px;
   line-height: 1.2;
@@ -1229,13 +1225,14 @@ nav {
   color: #757575;
 }
 
-.modal__link:hover {
+.modal-contacts-mb__link:hover, .modal-contacts-mb__link:focus {
   color: var(--accent-color);
 }
 
 .modal__soc-list {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .modal__soc-link {

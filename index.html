@@ -734,49 +734,69 @@
 
 <!--  Modal mobile contacts -->
 
-        <div class="backdrop_mobile is-hidden" mobile-modal>
+  <div class="backdrop_mobile is-hidden" mobile-modal>
       <div class="modal_mobile">
-        <button class=" modal__close-button--mb" data-close>
+        <button class="modal__close-button--mb" data-close>
           <svg class="modal__close-icon--mb" width="30" height="30">
             <use href="./images/icons/symbol-defs.svg#icon-close-1"></use>
           </svg>
         </button>
+
         <ul class="modal_menu">
           <li class="modal__item">
-            <a href="" class="modal__link">Студия </a>
+            <a href="./index.html" class="modal__link">Студия </a>
           </li>
           <li class="modal__item">
-            <a href="" class="modal__link">Портфолио</a>
-          </li>
-          <li class="modal__item contacts">
-            <a href="" class="modal__link"> Контакты</a>
+            <a href="./portfolio.html" class="modal__link">Портфолио</a>
           </li>
           <li class="modal__item">
-            <a href="tel:+380961111111" class="modal__link modal__phone">
-              +38 096 111 11 11
-            </a>
-          </li>
-          <li class="modal__item item-email">
-            <a href="" class="modal__link modal__email"> info@devstudio.com </a>
+            <a href="" class="modal__link">Контакты</a>
           </li>
         </ul>
-        <ul class="modal__soc-list">
-          <li class="modal__soc-item">
-            <a href=" " class="modal__soc-link">Instagram<span class="modal__partition" > | </span></a>
-          </li>
-           <ul class="modal__soc-list">
-          <li class="modal__soc-item">
-            <a href=" " class="modal__soc-link"> Twitter<span class="modal__partition" > | </span></a>
-          </li>
-           <ul class="modal__soc-list">
-          <li class="modal__soc-item">
-            <a href=" " class="modal__soc-link"> Facebook<span class="modal__partition" > | </span></a>
-          </li>
-           <ul class="modal__soc-list">
-          <li class="modal__soc-item">
-            <a href=" " class="modal__soc-link">Linkedin</a>
-          </li>
-        </ul>
+        <div class="modal--wrap">
+          <ul class="modal-contacts-mb">
+            <li class="modal-contacts-mb__item modal-contacts-mb__item--phone">
+              <a
+                href="tel:+380961111111"
+                class="modal-contacts-mb__link modal-contacts-mb__link--phone"
+              >
+                +38 096 111 11 11
+              </a>
+            </li>
+            <li class="modal-contacts-mb__item modal-contacts-mb__item--email">
+              <a
+                href=""
+                class="modal-contacts-mb__link modal-contacts-mb__link--email"
+              >
+                info@devstudio.com
+              </a>
+            </li>
+          </ul>
+
+          <ul class="modal__soc-list">
+            <li class="modal__soc-item">
+              <a href=" " class="modal__soc-link"
+                >Instagram<span class="modal__partition"> | </span></a
+              >
+            </li>
+
+            <li class="modal__soc-item">
+              <a href=" " class="modal__soc-link">
+                Twitter<span class="modal__partition"> | </span></a
+              >
+            </li>
+
+            <li class="modal__soc-item">
+              <a href=" " class="modal__soc-link">
+                Facebook<span class="modal__partition"> | </span></a
+              >
+            </li>
+
+            <li class="modal__soc-item">
+              <a href=" " class="modal__soc-link">Linkedin</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
     <script src="./js/modal _mobile.js"></script>
