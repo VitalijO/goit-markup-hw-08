@@ -20,8 +20,7 @@
 
 }
 
-.team-item {  
-   
+.team-item {   
     background: #fff;
     border-radius: 0px 0px 4px 4px;
 @media screen and (min-width:$tablet){
@@ -35,12 +34,16 @@
 
 .team__title {
     display: inline-block;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     text-align: center;
+    @include font(700, 28px, 1.17, 0.03em);
+    @media screen and (min-width:$desktop){
+    margin-bottom: 50px;
+    @include font(700, 36px, 1.17,  0.03em );    
+    }
     color: var(--title-text-color);
-@include font(700, 36px, 1.17,  0.03em );
-
 }
+
 
 .team-item__card {
     padding-top: var(--typical-margin);
@@ -87,14 +90,13 @@
     justify-content: center;
     align-items: center;
     color: #afb1b8;
-@include animation(color);
+    background-color: #fff;
+@include animation(color, background-color);
 
 &:hover {
     color: #fff;
     background-color: var(--accent-color);
-
 }
-
 }
 
 .social-networks__icon {

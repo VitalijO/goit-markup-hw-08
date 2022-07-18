@@ -124,7 +124,7 @@ nav {
     margin-right: 0;
 }
 @media screen and (min-width:$desktop) {
-    @include font(500, 14px, 1.17, 0.03em);  
+    @include font(500, 14px, 1.17, 0.02em);  
 }     
 }
 
@@ -159,6 +159,8 @@ nav {
     border: none;
     margin-top: auto;
     margin-bottom:auto;
+    color: currentColor;
+    @include animation(color);
     &:hover,
     &:focus {
         fill: var(--accent-color);
