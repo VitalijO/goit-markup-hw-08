@@ -53,11 +53,19 @@ nav {
     display: flex;
     justify-content: space-evenly;
     flex-direction: column;
-    
    
 @media screen and (min-width:$desktop) {
     flex-direction: row;
     align-items: center;
+
+@media screen and (max-width:767px){
+        display: none;
+}
+        
+@media screen and (min-width:$tablet){
+        display: flex;
+        margin-left: auto; 
+    }
     
 }
 }
@@ -72,35 +80,22 @@ nav {
     @include font(500, 14px, 1.14, 0.02em);
 }
 
-.auth {
-    @media screen and (max-width:767px){
-        display: none;
-        margin-left: 315px;
-    }
-        
-    @media screen and (min-width:$tablet){
-        display: flex;
-        margin-left: 90px; 
-    }
-    
-}
 
 .auth__item.auth__email{
+@media screen and (min-width:$desktop){
     margin-right: 30px;
+}  
 }
 
 .menu__link {
-    @media screen and (min-width:$tablet){
-    padding-top: 32px;
-    padding-bottom: 32px;
-    }
-    
-
 @include animation(color);
-
 &:hover,
 &:focus{
         color: var(--accent-color);
+    }
+    @media screen and (min-width:$tablet){
+    padding-top: 32px;
+    padding-bottom: 32px;
     }
 }
 
@@ -113,8 +108,6 @@ nav {
     width: 100%;
     background-color: var(--accent-color);
     border-radius: 2px;
-
-    
 }
 
 
@@ -123,16 +116,17 @@ nav {
     color: var(--common-text-color);
     display: flex;
     @include font(500, 12px, 1.17, 0.02em);
-    @media screen and (min-width:$desktop) {
-      @include font(500, 14px, 1.17, 0.03em);
-    }
-    
-
+&:hover,
+&:focus {
+    color: var(--accent-color);
+}  
 &:last-child {
     margin-right: 0;
-   }
 }
-
+@media screen and (min-width:$desktop) {
+    @include font(500, 14px, 1.17, 0.03em);  
+}     
+}
 
 
 .menu__link {
@@ -165,17 +159,11 @@ nav {
     border: none;
     margin-top: auto;
     margin-bottom:auto;
-    margin-right: 10px;
-
     &:hover,
     &:focus {
         fill: var(--accent-color);
     }
-}
-
-.nav__button {
-
 @media screen and (min-width:$tablet) {
-        display: none;
-    }
+    display: none;
+}
 }

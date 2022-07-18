@@ -3,14 +3,12 @@
     flex-wrap: wrap;
     align-items: stretch;
     gap: 30px;
-    margin-bottom: 60px;
-@media screen and (min-width:$desktop) {
-    margin-bottom: 94px;
-}
+
 }
 
 .made-projects-list__item {
-    width: 100%;
+    display: flex;
+
      
 @media screen and (min-width:$tablet) {
     width: calc((100% - 30px) / 2);
@@ -81,6 +79,7 @@
 .made-projects-list__image-wrapper {
     position: relative;
     overflow: hidden;
+    max-width: 100%;
 }
 
 .made-projects-list__overlay {
@@ -94,8 +93,8 @@
     opacity: 0;
     transform: translateY(100%);
 
-    @include animation(opacity);
-    @include animation(transform);
+    @include animation(opacity, transform);
+    
         
 }
 

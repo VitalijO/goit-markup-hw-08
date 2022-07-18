@@ -226,6 +226,19 @@ nav {
   }
 }
 
+@media screen and (min-width: 1200px) and (max-width: 767px) {
+  .auth {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1200px) and (min-width: 768px) {
+  .auth {
+    display: flex;
+    margin-left: auto;
+  }
+}
+
 .menu,
 .auth {
   font-weight: 500;
@@ -241,22 +254,10 @@ nav {
   }
 }
 
-@media screen and (max-width: 767px) {
-  .auth {
-    display: none;
-    margin-left: 315px;
+@media screen and (min-width: 1200px) {
+  .auth__item.auth__email {
+    margin-right: 30px;
   }
-}
-
-@media screen and (min-width: 768px) {
-  .auth {
-    display: flex;
-    margin-left: 90px;
-  }
-}
-
-.auth__item.auth__email {
-  margin-right: 30px;
 }
 
 .menu__link {
@@ -265,15 +266,15 @@ nav {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.menu__link:hover, .menu__link:focus {
+  color: var(--accent-color);
+}
+
 @media screen and (min-width: 768px) {
   .menu__link {
     padding-top: 32px;
     padding-bottom: 32px;
   }
-}
-
-.menu__link:hover, .menu__link:focus {
-  color: var(--accent-color);
 }
 
 .menu__link--current::after {
@@ -297,6 +298,14 @@ nav {
   letter-spacing: 0.02em;
 }
 
+.auth__link:hover, .auth__link:focus {
+  color: var(--accent-color);
+}
+
+.auth__link:last-child {
+  margin-right: 0;
+}
+
 @media screen and (min-width: 1200px) {
   .auth__link {
     font-weight: 500;
@@ -304,10 +313,6 @@ nav {
     line-height: 1.17;
     letter-spacing: 0.03em;
   }
-}
-
-.auth__link:last-child {
-  margin-right: 0;
 }
 
 .menu__link {
@@ -336,7 +341,6 @@ nav {
   border: none;
   margin-top: auto;
   margin-bottom: auto;
-  margin-right: 10px;
 }
 
 .nav__button:hover, .nav__button:focus {
@@ -434,13 +438,13 @@ nav {
   background-color: #188CE8;
 }
 
-/* .portfolio {
-   // padding-top: var(--typical-padding);
-   // padding-bottom: var(--typical-padding);
-} */
+.portfolio {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
 .portfolio__menu {
-  padding-top: 60px;
-  padding-bottom: 40px;
+  margin-bottom: 50px;
 }
 
 @media screen and (min-width: 768px) {
@@ -470,13 +474,7 @@ nav {
   font-size: 16px;
   line-height: 1.62;
   letter-spacing: 0.03em;
-  transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-property: background;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-property: box-shadow;
+  transition-property: color, background, box-shadow;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -499,17 +497,10 @@ nav {
   flex-wrap: wrap;
   align-items: stretch;
   gap: 30px;
-  margin-bottom: 60px;
-}
-
-@media screen and (min-width: 1200px) {
-  .made-projects-list {
-    margin-bottom: 94px;
-  }
 }
 
 .made-projects-list__item {
-  width: 100%;
+  display: flex;
 }
 
 @media screen and (min-width: 768px) {
@@ -588,6 +579,7 @@ nav {
 .made-projects-list__image-wrapper {
   position: relative;
   overflow: hidden;
+  max-width: 100%;
 }
 
 .made-projects-list__overlay {
@@ -600,10 +592,7 @@ nav {
   left: 0;
   opacity: 0;
   transform: translateY(100%);
-  transition-property: opacity;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-property: transform;
+  transition-property: opacity, transform;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -667,6 +656,7 @@ nav {
 }
 
 .features__title {
+  text-align: center;
   margin-bottom: 10px;
   color: var(--title-text-color);
   text-transform: uppercase;
@@ -674,6 +664,12 @@ nav {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
+}
+
+@media screen and (min-width: 768px) {
+  .features__title {
+    text-align: start;
+  }
 }
 
 .features__about {
@@ -765,7 +761,7 @@ nav {
   border-radius: 0px 0px 4px 4px;
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
   .team-item {
     width: calc((100% - 30px) / 2);
   }
@@ -878,6 +874,7 @@ nav {
 .clients__list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 30px;
 }
 
@@ -907,15 +904,12 @@ nav {
   color: #AFB1B8;
   border: 1px solid #AFB1B8;
   border-radius: 4px;
-  transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-property: border-color;
+  transition-property: color, border-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.client__link:hover, .client__link:focus {
+.client__link:hover {
   color: var(--accent-color);
   border-color: var(--accent-color);
 }
@@ -954,6 +948,7 @@ nav {
 
 @media screen and (min-width: 1200px) {
   .footer__contacts {
+    text-align: left;
     margin-right: 70px;
   }
 }
@@ -1071,7 +1066,14 @@ nav {
 }
 
 .mailling__form {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 1200px) {
+  .mailling__form {
+    flex-direction: row;
+  }
 }
 
 .mailling__input {
@@ -1087,6 +1089,12 @@ nav {
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   background: var(--body-dark-color);
+}
+
+@media screen and (min-width: 768px) {
+  .mailling__input {
+    width: 450px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -1106,8 +1114,9 @@ nav {
 }
 
 .mailling__button {
-  display: inline-block;
   text-align: center;
+  margin-left: auto;
+  margin-right: auto;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
@@ -1166,6 +1175,10 @@ nav {
   cursor: pointer;
 }
 
+.modal__close-button--mb:hover {
+  color: var(--accent-color);
+}
+
 .modal__close-icon--mb {
   position: absolute;
   top: 50%;
@@ -1195,6 +1208,10 @@ nav {
 }
 
 .modal__link:hover, .modal__link:focus {
+  color: var(--accent-color);
+}
+
+.modal__link.modal__link--current {
   color: var(--accent-color);
 }
 
@@ -1328,6 +1345,10 @@ nav {
   transition-property: fill;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal__close-icon:hover {
+  fill: var(--accent-color);
 }
 
 .modal__title {

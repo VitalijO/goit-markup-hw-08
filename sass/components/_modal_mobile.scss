@@ -43,7 +43,9 @@
     width: 30px;
     height: 30px;
     cursor: pointer;
-
+&:hover {
+        color: var(--accent-color);
+    }
 
 }
 
@@ -54,8 +56,7 @@
     transform: translate(-50%, -50%);
     fill: currentColor;
     @include animation(fill);
-
- &:hover  {
+&:hover  {
     fill: var(--accent-color);
     }
 }
@@ -70,9 +71,11 @@
     color: var(--title-text-color);
     text-decoration: none;
 
-
 &:hover,
 &:focus {
+    color: var(--accent-color);
+}
+&.modal__link--current{
     color: var(--accent-color);
 }
 }

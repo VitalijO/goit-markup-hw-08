@@ -21,10 +21,10 @@
     margin-right: 165px; 
     }
 @media screen and (min-width:$desktop) {
+    text-align: left;
     margin-right: 70px;
 }
 }
-
 
 .footer--logo {
     display: block;
@@ -47,15 +47,12 @@
 .footer__list{
     margin-bottom: 60px;
 }
-
 .footer__address {
-   
     color: #fff;
-
 &:hover,
 &:focus {
-            color: var(--accent-color);
-        }
+    color: var(--accent-color);
+}
 }
 
 .footer__email,
@@ -63,10 +60,9 @@
     color: rgba(255, 255, 255, 0.6);
 
 &:hover,
-&:focus
- {
-            color: var(--accent-color);
-        }
+&:focus{
+    color: var(--accent-color);
+}
 }
 
 //__________________________________________ Join us section_____________________________________________________________
@@ -134,14 +130,23 @@
 }
 
 .mailling__form {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+@media screen and (min-width:$desktop){
+   flex-direction: row;
+}
+       
 }
 
 .mailling__input {
     width: 100%;
+@media screen and (min-width:$tablet) {
+        width: 450px;
+       
+    }
 @media screen and (min-width:$desktop){
     width: 358px;
-    margin-right: 12px;
+     margin-right: 12px;
 }
     height: 50px;
     padding-left: 16px;
@@ -157,8 +162,6 @@
     
 }
 
-
-
 .mailling__input::placeholder {
     background: var(--body-dark-color);
     color: rgba(255, 255, 255, 0.6);
@@ -167,11 +170,13 @@
 
 
 .mailling__button {
-    display: inline-block;
     text-align: center;
+    margin-left: auto;
+    margin-right: auto;
     @include font(700, 16px, 1.88, 0.06em);
 }
 
 .mailling__icon-send {
     margin-left: 10px;
+    
 }
