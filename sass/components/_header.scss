@@ -115,6 +115,7 @@ nav {
     text-decoration: none;
     color: var(--common-text-color);
     display: flex;
+    align-items: center;
     @include font(500, 12px, 1.17, 0.02em);
 &:hover,
 &:focus {

@@ -81,6 +81,9 @@
     text-transform: uppercase;
     color: #fff;
     @include font(700, 14px, 1.14, 0.03em);
+@media screen and (min-width:$desktop) {
+        text-align: left;
+        }
 }
 
 .join-us__list {
